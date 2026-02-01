@@ -24,38 +24,39 @@
     h1 {
       font-size: 2.6rem;
       color: #2f2f2f;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .sub {
-      color: #555;
       font-size: 1.1rem;
+      color: #555;
     }
 
     .buttons {
       margin-top: 40px;
       position: relative;
-      width: 320px;
-      height: 200px;
+      width: 340px;
+      height: 220px;
     }
 
     button {
       font-size: 1.1rem;
-      padding: 12px 34px;
+      padding: 14px 38px;
       border: none;
-      border-radius: 40px;
+      border-radius: 50px;
       cursor: pointer;
       position: absolute;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     button:hover {
-      transform: scale(1.05);
+      transform: scale(1.06);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.15);
     }
 
     #yes {
-      background-color: #ff7a9c;
+      background: linear-gradient(135deg, #ff7a9c, #ff4f7b);
       color: white;
       left: 50%;
       transform: translateX(-50%);
@@ -63,18 +64,30 @@
 
     #no {
       background-color: white;
-      color: #ff7a9c;
+      color: #ff4f7b;
     }
 
     #yay {
       display: none;
       margin-top: 30px;
-      animation: fadeIn 1s ease forwards;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    #yay img {
+      margin-top: 20px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -90,8 +103,8 @@
 
   <div id="yay">
     <h2>Oh thank GOD 😮‍💨🥹</h2>
-    <p>Best friends. Always. 💛</p>
-    <img src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif" width="300">
+    <p>Best friends forever. Always. 💛</p>
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjhwbGhrOWd5a2IwZGMxeGNuazVxOXJ0cWk5a2V2YmlhaGIzOWx1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o75ajIFH0QnQC3nCeD/giphy.gif" width="320">
   </div>
 
   <script>
@@ -99,18 +112,4 @@
     const yesBtn = document.getElementById("yes");
     const yay = document.getElementById("yay");
 
-    noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * 260;
-      const y = Math.random() * 140;
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-    });
-
-    yesBtn.addEventListener("click", () => {
-      document.querySelector(".buttons").style.display = "none";
-      yay.style.display = "block";
-    });
-  </script>
-
-</body>
-</html>
+    noBtn.addEventListener("mouse
